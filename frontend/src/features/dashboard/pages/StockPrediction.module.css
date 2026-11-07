@@ -1,0 +1,387 @@
+
+.container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 2.5rem 1.5rem;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.badgeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.pulsingDot {
+  width: 8px;
+  height: 8px;
+  background-color: #f59e0b;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.engineLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #d97706;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #111827;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin: 0.25rem 0 0 0;
+}
+
+.dateFilterBox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.dateLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+.dateInput {
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  outline: none;
+  cursor: pointer;
+}
+
+.simulatorCard {
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+  border: 1px solid rgba(252, 211, 77, 0.4);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.simulatorHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .simulatorHeader {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.simulatorTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.simulatorDesc {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0.25rem 0 0 0;
+}
+
+.offsetPill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  background-color: #fef3c7;
+  color: #78350f;
+  border-radius: 9999px;
+  border: 1px solid #fde68a;
+}
+
+.slider {
+  width: 100%;
+  accent-color: #f59e0b;
+  cursor: pointer;
+  height: 6px;
+  background-color: #fde68a;
+  border-radius: 4px;
+}
+
+.simulatorFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(252, 211, 77, 0.3);
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .simulatorFooter {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.riskDesc {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.riskBadgeSafe {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.riskBadgeWarning {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  background-color: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.riskBadgeDanger {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  background-color: #fff1f2;
+  color: #9f1239;
+  border: 1px solid #fecdd3;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.sectionTitle span {
+  color: #f59e0b;
+}
+
+.sectionSubtitle {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  border-color: #fde68a;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.ingredientTag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #d97706;
+  text-transform: uppercase;
+  background-color: #fffbeb;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.35rem;
+}
+
+.ingredientName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.5rem 0 0 0;
+}
+
+.cardFooter {
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f9fafb;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cardFooterLabel {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.cardFooterValue {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #111827;
+  letter-spacing: -0.025em;
+}
+
+.cardFooterUnit {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-left: 0.25rem;
+}
+
+.tableWrapper {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table th {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f9fafb;
+  color: #1f2937;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background-color: rgba(254, 243, 199, 0.2);
+}
+
+.menuName {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.menuPortion {
+  text-align: right;
+  font-weight: 700;
+  color: #b45309;
+}
+
+.menuUnit {
+  font-weight: 400;
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
