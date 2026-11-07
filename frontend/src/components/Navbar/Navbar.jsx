@@ -15,7 +15,8 @@ export default function Navbar({ currentUser, onLogout }) {
     // Menu untuk Pengunjung / Customer Publik (Belum Login)
     navItems = [
       { path: '/menu/6aec060fbb71bd1b0a3ef9ae', label: 'Menu & Pesan', icon: 'fa-utensils' },
-      { path: '/auth/login', label: 'Login Owner/Kasir', icon: 'fa-right-to-bracket' }
+      { path: '/auth/login', label: 'Login Owner/Kasir', icon: 'fa-right-to-bracket' },
+      { path: '/auth/register', label: 'Register', icon: 'fa-right-to-bracket' }
     ];
   } else if (currentUser.role === 'cashier') {
     // Menu Khusus Kasir
@@ -27,7 +28,7 @@ export default function Navbar({ currentUser, onLogout }) {
     const tenantId = currentUser.tenantId;
 
     navItems = [
-      { path: '/', label: 'Dashboard', icon: 'fa-chart-line' },
+      { path: '/stock-dashboard', label: 'Dashboard Prediksi', icon: 'fa-chart-line' },
       { path: '/insight-advice', label: 'AI Advice', icon: 'fa-brain' }, 
       { path: '/insight', label: 'Insight AI', icon: 'fa-brain' },
       // Mengarahkan langsung ke rute menu spesifik tenant
@@ -42,7 +43,7 @@ export default function Navbar({ currentUser, onLogout }) {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         {/* Brand / Logo Fortis */}
-        <Link to="menu/6aec060fbb71bd1b0a3ef9ae" className={styles.brand} onClick={closeMenu}>
+        <Link to="/" className={styles.brand} onClick={closeMenu}>
           <i className="fa-solid fa-shield-halved"></i>
           <span>Fortis</span>
           {currentUser && (

@@ -13,6 +13,7 @@ import ChatbotManager from './features/chatbot/pages/ChatbotManager';
 import styles from './App.module.css'; 
 import CustomerChatbotWidget from './features/chatbot/pages/CustomerChatbotWidget';
 import AiAdvisorCard from './features/insightAdvice/AiAdvisorCard';
+import Landing from './features/landing/pages/Landing';
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(() => {
@@ -43,6 +44,8 @@ export default function App() {
 
         <main className={styles.mainContent} style={{ flex: 1 }}>
           <Routes>
+            <Route path="/" element={<Landing />} />
+
             <Route path="/menu" element={<CustomerMenu />} />
             <Route path="/menu/:tenantId" element={<CustomerMenu />} />
             <Route path="/menu/order/:tenantId" element={<CustomerOrder />} />
@@ -87,7 +90,7 @@ export default function App() {
             {/* RUTE TERPROTEKSI (Wajib Login untuk Admin / Kasir)        */}
             {/* ========================================================= */}
             <Route 
-              path="/" 
+              path="/stock-dashboard" 
               element={
                 !currentUser ? (
                   <Navigate to="/menu" replace /> // Jika belum login, diarahkan ke halaman menu publik / landing page
@@ -202,7 +205,7 @@ export default function App() {
             </div>
           ) : (
             <div style={{ fontSize: '0.8rem', color: '#64748b' }}>
-              Status: Belum Login. <Link to="/auth/login" style={{ color: '#d97706', fontWeight: '600', textDecoration: 'none' }}>Masuk</Link> atau kunjungi <Link to="/menu" style={{ color: '#059669', fontWeight: '600', textDecoration: 'none' }}>Menu Publik</Link>
+              Status: Belum Login. <Link to="/auth/login" style={{ color: '#d97706', fontWeight: '600', textDecoration: 'none' }}>Masuk</Link> atau kunjungi <Link to="/menu/6aec060fbb71bd1b0a3ef9ae" style={{ color: '#059669', fontWeight: '600', textDecoration: 'none' }}>Menu Publik</Link>
             </div>
           )}
         </div>

@@ -55,10 +55,12 @@ export default function AiAdvisorCard({ tenantId }) {
       padding: '1.5rem',
       fontFamily: "'Poppins', sans-serif",
       boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
-      marginTop: '1.5rem'
+      marginTop: '5rem',
+      marginLeft: '20rem',
+      marginRight: '20rem'
     }}>
       {/* Header & Informasi Tenant */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid #f1f5f9', paddingBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', marginLeft: '3rem', borderBottom: '1px solid #f1f5f9', paddingBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <i className="fa-solid fa-brain" style={{ color: '#f59e0b', fontSize: '1.25rem' }}></i>
           <h3 style={{ margin: 0, fontSize: '1rem', color: '#0f172a' }}>Fortis RAG AI Business Advisor</h3>
